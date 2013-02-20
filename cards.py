@@ -46,7 +46,7 @@ class Deck(object):
 		return False
 
 	def shuffle(self):
-		random.shuffle(self.cards)
+		shuffle(self.cards)
 
 
 class Card(object):
@@ -71,5 +71,6 @@ class Card(object):
 
 if __name__ == "__main__":
     deck = Deck('French')
+    deck.shuffle()
     for card in deck.cards:
     	print card
