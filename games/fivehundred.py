@@ -1,7 +1,8 @@
 #_*_ coding: utf-8 _*_
+from game  import Game
 from cards import Deck, Card
 
-class Rules(object):
+class Rules(Game):
 	"""Rules for the game of 500"""
 	def __init__(self):
 		super(Rules, self).__init__()
@@ -12,9 +13,6 @@ class Rules(object):
 		self.gameLimit = 0
 		self.roundLimit = 0
 		self.handLimit = 0
-
-	def newGame(self):
-		self.__init__()
 
 	def deck(self):
 		for cards in [(0,2),(1,2),(2,2),(3,2),(0,3),(1,3),(2,3),(3,3),(0,4),(1,4)]:
