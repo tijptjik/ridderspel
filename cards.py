@@ -63,13 +63,13 @@ class Card(object):
 				rank = rank + 1
 			self.unicode = unicode(unichr(int(deckStyles[deck]['suitUnicodes'][suit] + unicode(hex(rank)[2].upper()),16)))
 	def __str__(self):
-		return str(self.rankName), 'of', str(self.suitName)
+		return str(self.rankName) + ' of ' + str(self.suitName)
 	def __unicode__(self):
 		return (self.unicode if self.unicode else self.suit + self.rank)
 	# def _cmp_():
 
 
 if __name__ == "__main__":
-    deck = Decks('French')
-    for card in deck.deck:
+    deck = Deck('French')
+    for card in deck.cards:
     	print card
