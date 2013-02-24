@@ -37,7 +37,16 @@ class Rules(Game):
 
 
 class Hand(object):
-	"""docstring for Hand"""
+	"""The parameters for the respective hands played throughout the games.
+	   
+	   In the case of 'Oh Hell' the number of cards dealt in each hand fluctuates
+	   throughout the game, as does the trump suit. Depending on the variant and
+	   number of players, the game generally starts with 8 cards per player, 
+	   diminising by one each hand until 1 card per player remains. The following 
+	   hands each add another card to the players' hands until the original number
+	   is reached. 
+   
+	   Trumps proceed from Spades, Diamons, Clubs, Hearts to No Trumps"""
 	def __init__(self, n):
 		super(Hand, self).__init__()
 		self.trumpSuits = [u'♠',u'♦',u'♣',u'♥',None]
