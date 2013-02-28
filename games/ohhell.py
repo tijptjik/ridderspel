@@ -8,8 +8,8 @@ class Rules(Game):
 		self.deckStyle = 'French'
 		self.deck = Deck(self.deckStyle)
 		self.playerLimit = [3,4,5]
+		self.handLimit = [15,17,19,21,23]
 		super(Rules, self).__init__()
-		self.handLimit = 15
 		self.handCounter = 0
 		self.hands = [Hand(n) for n in range(self.handLimit)]
 	
@@ -33,8 +33,6 @@ class Rules(Game):
 				holding = holding + card.__unicode__() + '  '
 			print holding
 		print '\n\n\n'
-
-
 
 class Hand(object):
 	"""The parameters for the respective hands played throughout the games.

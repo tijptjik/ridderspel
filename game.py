@@ -7,24 +7,24 @@ class Game(object):
 		super(Game, self).__init__()
 		self.gameLimit = 0
 		self.roundLimit = 0
-		self.handLimit = 0
-		self.playerNumber = self.selectNumberOfPlayers()
-		self.players = [Player(n) for n in range(self.playerNumber)]
+		self.handLimit = self.promptParameter(self.handLimit, 'hands to be played','hands are you willing to play')
+		self.playerLimit = self.promptParameter(self.playerLimit, 'players', 'How many players are joining?')
+		self.players = [Player(n) for n in range(self.playerLimit)]
 
-	def selectNumberOfPlayers(self):
-		players = self.playerLimit
-		if len(players) == 1:
-			return players[0]
+	def promptParameter(self, limiter, description, question):
+		limitSet = limiter
+		if len(limitSet) == 1:
+			return limitSet[0]
 		else:
-			print 'Game allows for', players, 'players'
-		playerNumber = input('\n How many players are joining?\n')
-		if playerNumber in players:
+			print 'Game allows for', limitSet, description
+		limitNumber = input('\n' + question + '?\n')
+		if limitNumber in limitSet:
 			print
-			return playerNumber
+			return limitNumber
 		else:
-			print 'You must select a number within', players, '\n'
-			self.selectNumberOfPlayers()
-	
+			print 'You must select a number within', hands, '\n'
+			self.promptParameter(limiter, description, question)
+
 	def newGame(self):
 		self.__init__()
 
@@ -60,7 +60,7 @@ class GameLoader(object):
 		
 class Player(object):
 	"""docstring for Player"""
-	playerNames = ['Maru 8','Schmoka','Goya']
+	playerNames = ['Maru 8','Schmoka','Goya','Comet','Rogue']
 	def __init__(self, n):
 		super(Player, self).__init__()
 		self.id = n
