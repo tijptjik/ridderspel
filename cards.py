@@ -8,15 +8,23 @@ deckStyles = {
 		'suitUnicodes'		: ['1F0B','1F0C','1F0D','1F0A'],
 		'suitNames' 		: ['Hearts','Diamonds','Clubs','Spades'],
 		'rankNames' 		: [None,'Ace','Two','Three','Four','Five','Six','Seven','Eight','Nine','Ten','Jack','Queen','King'],
-		'rankSymbols' 		: [None,'1','2','3','4','5','6','7','8','9','10','J','R','Q','K'],
+		'rankSymbols' 		: [None,'A','2','3','4','5','6','7','8','9','10','J','R','Q','K'],
 	},
 	'Knightly' : {
 		'suitSymbols' 		: [u'♥',u'♦',u'♣',u'♠'],
 		'suitAltSymbols' 	: [u'♡',u'♢',u'♧',u'♤'],
 		'suitUnicodes'		: ['1F0B','1F0C','1F0D','1F0A'],
 		'suitNames' 		: ['Hearts','Diamonds','Clubs','Spades'],
-		'rankNames' 		: [None,'One','Two','Three','Four','Five','Six','Seven','Eight','Nine','Ten','Jack','Knight','Queen','King'],
-		'rankSymbols' 		: [None,'1','2','3','4','5','6','7','8','9','10','J','C','Q','K'],
+		'rankNames' 		: [None,'One','Two','Three','Four','Five','Six','Seven','Eight','Nine','Ten','Jack','Knight','Queen','King','Ace'],
+		'rankSymbols' 		: [None,'1','2','3','4','5','6','7','8','9','10','J','C','Q','K','A'],
+	},
+	'Wizard' : {
+		'suitSymbols' 		: [u'♥',u'♦',u'♣',u'♠'],
+		'suitAltSymbols' 	: [u'♡',u'♢',u'♧',u'♤'],
+		'suitUnicodes'		: ['1F0B','1F0C','1F0D','1F0A'],
+		'suitNames' 		: ['Hearts','Diamonds','Clubs','Spades'],
+		'rankNames' 		: [None,'Fool','Two','Three','Four','Five','Six','Seven','Eight','Nine','Ten','Jack','Queen','King','Ace','Wizard'],
+		'rankSymbols' 		: [None,'F','2','3','4','5','6','7','8','9','10','J','Q','K','A','W'],
 	}
 }
 
