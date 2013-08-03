@@ -7,9 +7,13 @@ class Game(object):
 		super(Game, self).__init__()
 		self.gameLimit = 0
 		self.roundLimit = 0
-		self.handLimit = self.promptParameter(self.handLimit, 'hands to be played','hands are you willing to play')
 		self.playerLimit = self.promptParameter(self.playerLimit, 'players', 'How many players are joining?')
+		self.limitHands()
+		self.handLimit = self.promptParameter(self.handLimit, 'hands to be played','hands are you willing to play')
 		self.players = [Player(n) for n in range(self.playerLimit)]
+
+	def limitHands(self):
+		print 'y'
 
 	def promptParameter(self, limiter, description, question):
 		limitSet = limiter
